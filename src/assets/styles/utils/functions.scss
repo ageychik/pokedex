@@ -1,0 +1,23 @@
+@function vw($size) {
+  @return ($size / ($lg * 0.01)) + vw;
+}
+
+@function vwm($size) {
+  @return ($size / ($xs * 0.01)) + vw;
+}
+
+@function vwt($size) {
+  @return ($size / ($md * 0.01)) + vw;
+}
+
+@function value($in, $device, $out: 'vw') {
+  $str: '';
+  @each $size in $in {
+    @if $out == 'vw' {
+      $str: #{ $str + ($size / ($device * 0.01)) + $out + ' ' };
+    } @else {
+      $str: #{ $str + $size + $out + ' ' };
+    }
+  }
+  @return $str;
+}

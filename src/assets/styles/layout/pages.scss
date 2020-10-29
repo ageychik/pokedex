@@ -1,0 +1,12 @@
+.index-page{
+  @include resp(padding, (24, 0), (27, 0), (73, 0));
+  h2{
+    @include resp(font-size, 24, 35, 35);
+    @include resp(letter-spacing, 3, 3, 3);
+    text-align: center;
+    line-height: 1.16;
+    font-family: $font;
+    max-width: 95%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,16 @@
+.find-form{
+  width: 100%;
+  @include resp(padding, (29, 0, 16), (75, 0, 12), (34, 0, 36));
+  input.search{
+    @include resp(font-size, 12, 16, 16);
+    @include resp(border-radius, 40, 40, 40);
+    @include resp(padding, (9, 18, 6), (8, 20), (16, 31, 17));
+    color: $color-pharagraph;
+    font-weight: 400;
+    line-height: 1.25;
+    background: #f2f2f2;
+    width: 100%;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 2px rgba(33, 33, 33, 0.1)
+  }
+}

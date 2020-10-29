@@ -1,0 +1,34 @@
+$font: 'Karla', sans-serif;
+$fontSource: 'Source Sans Pro', sans-serif;
+/*
+  Colors
+*/
+
+$black: #242424;
+$white: #FAFAFA;
+$color-third: #F5DB13;
+$color-primary: #F2B807;
+$color-second: #F28F16;
+$color-danger: #D93E30;
+$color-grey: #F6F7F9;
+$color-pharagraph: #212121;
+$color-white-light: #FDFDFD;
+$color-goldgradient: #1D1E1D;
+/*
+  Sizes
+*/
+
+$xl: 1440;
+$large: $xl + px;
+
+$lg: 1120;
+$desktop: $lg + px;
+
+$md: 768;
+$tablet: $md + px;
+
+$sm: 565;
+$mobileL: $sm + px;
+
+$xs: 375;
+$mobile: $xs + px;

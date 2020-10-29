@@ -1,0 +1,15 @@
+.header{
+  @include resp(padding, (22, 0, 11), (24, 0), (14, 0, 16));
+  background: $color-third;
+  box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
+  .header-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.logo{
+  @include resp(width, 58, 120, 157);
+  @include resp(height, 22, 45, 63);
+}

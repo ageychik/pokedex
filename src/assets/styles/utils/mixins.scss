@@ -1,0 +1,95 @@
+@mixin font-h-1 {
+  font-size:72px;
+  font-family:$font;
+  font-weight:normal;
+}
+@mixin font-h-2 {
+  font-size:32px;
+  font-family:$font;
+  font-weight:normal;
+}
+@mixin font-h-3 {
+  font-size:18px;
+  font-family:$font;
+  font-weight:bold;
+}
+@mixin font-h-4 {
+  font-size:12px;
+  font-family:$font;
+  font-weight:normal;
+}
+@mixin font-paragraph {
+  font-size:16px;
+  font-family: $fontSource;
+  font-weight:normal;
+}
+@mixin font-cardtitleimg {
+  font-size:36px;
+  font-family:$font;
+  font-weight:bold;
+}
+@mixin font-cardtitlecontainer {
+  font-size:16px;
+  font-family:$font;
+  font-weight:normal;
+}
+@mixin font-presentation {
+  font-size:36px;
+  font-family:$font;
+  font-weight:normal;
+  line-height:101.49999856948853px;
+}
+@mixin calc($dir, $o1, $o2){
+  max-#{ $dir } : calc(#{ $o1 - value($o2, $xs) });
+
+  @media (min-width: $mobileL) and (orientation: landscape) {
+    max-#{ $dir } : calc(#{ $o1 - value($o2, $sm) });
+  }
+
+  @media (min-width: $tablet){
+    max-#{ $dir } : calc(#{ $o1 - value($o2, $md) });
+  }
+
+  @media (min-width: $desktop) {
+    max-#{ $dir } : calc(#{ $o1 - value($o2, $xl) });
+  }
+}
+
+@mixin media($prop: desktop){
+  @if $prop == desktop {
+    @media (min-width: $desktop) { @content }
+  }
+
+  @else if $prop == tablet {
+    @media (min-width: $tablet) { @content }
+  }
+
+  @else {
+    @media (min-width: $prop + px) { @content }
+  }
+}
+
+@mixin resp($prop, $m: none, $t: none, $d: none){
+  @if $m != none{
+    #{ $prop } : value($m, $xs);
+    @media (min-width: $mobileL) and (orientation: landscape) {
+      #{ $prop } : value($m, $sm);
+    }
+  }
+
+  @if $t != none{
+    @media (min-width: $tablet){
+      #{ $prop } : value($t, $md);
+    }
+  }
+
+  @if $d != none{
+    @media (min-width: $desktop) {
+      #{ $prop } : value($d, $xl);
+    }
+
+    @media (min-width: $large) {
+      #{ $prop } : value($d, $xl, 'px');
+    }
+  }
+}

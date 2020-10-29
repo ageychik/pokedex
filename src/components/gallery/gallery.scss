@@ -1,0 +1,10 @@
+.gallery{
+  @include resp(margin, (0, 0), (0, -10), (0, -16));
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: auto;
+  @include media(tablet){
+    flex-direction: row;
+  }
+}
