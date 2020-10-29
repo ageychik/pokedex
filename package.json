@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "author": "Roma <forwm.ru@gmail.com>",
   "description": "Tutorial project for lesson react, redux and sage",
-  "keywords": ["react", "redux", "sage", "scss"],
+  "keywords": [
+    "react",
+    "redux",
+    "sage",
+    "scss"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ageychik/pokedex"
@@ -14,6 +19,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "classnames": "2.2.6",
+    "express": "4.17.1",
     "node-sass": "4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
