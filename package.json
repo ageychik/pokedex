@@ -9,6 +9,9 @@
     "sage",
     "scss"
   ],
+  "engines": {
+    "node": "12.x"
+  },
   "main": "server.js",
   "repository": {
     "type": "git",
