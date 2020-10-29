@@ -109,6 +109,10 @@
     &[data-color="fluing"] {
       background: linear-gradient(270deg, #F89EAE 0.15%, #F4B5C1 100%);
     }
+    &[data-color="bug"]{
+      background: linear-gradient(270deg, $color-primary 0.15%, $color-second 100%);
+
+    }
     .card-picture-item{
       height: 100%;
       background-position: right center;

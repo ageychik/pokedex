@@ -30,16 +30,15 @@ html {
   --global-nav-segmentbar-height: 0px;
   --global-nav-localeswitcher-height: 0px;
   --global-nav-collective-height: 0px;
-  &.no--scroll{
-    overflow: hidden !important;
-    overflow-y: scroll !important;
-    height: 100% !important;
-    position: relative;
-    body {
-      overflow: hidden !important;
-      height: 100% !important;
-    }
-  }
+ @include media(){
+   overflow: hidden !important;
+   height: 100% !important;
+   position: relative;
+   body {
+     overflow: hidden !important;
+     height: 100% !important;
+   }
+ }
 }
 
 body {
@@ -129,12 +128,22 @@ img {
   max-height: 100%;
 }
 
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100vh;
+}
+
 .container{
   @include resp(padding, (0, 26), (0, 22), none);
   @include media(){
     box-sizing: content-box;
     max-width: 1125px;
+    max-height: 100%;
     padding: 0 15px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
   }
 }

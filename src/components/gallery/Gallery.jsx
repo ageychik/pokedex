@@ -10,9 +10,11 @@ export default class Gallery extends React.Component {
         if (!!result) {
             return (
                 <section className="gallery">
-                    {result.map((card, index) => {
-                        return (<CardGallery key={index} { ...card }/>)
-                    })}
+                    <div className="gallery-main">
+                        {result.map((card, index) => {
+                            return (<CardGallery key={index} { ...card }/>)
+                        })}
+                    </div>
                 </section>
             );
         }

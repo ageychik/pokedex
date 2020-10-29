@@ -1,6 +1,6 @@
 .find-form{
   width: 100%;
-  @include resp(padding, (29, 0, 16), (75, 0, 12), (34, 0, 36));
+  @include resp(padding, (29, 0, 8), (75, 0, 6), (34, 0, 18));
   input.search{
     @include resp(font-size, 12, 16, 16);
     @include resp(border-radius, 40, 40, 40);
