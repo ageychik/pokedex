@@ -27,7 +27,7 @@ class IndexPage extends React.Component{
                     {componentSections.map((el, index) => {
                         const Component = el;
                         return (
-                            <Component key={`section-${index}`} {...this.props} />
+                            <Component key={index} {...this.props} />
                         );
                     })}
                 </div>

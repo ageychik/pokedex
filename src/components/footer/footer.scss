@@ -1,0 +1,16 @@
+.footer{
+  @include resp(padding, (20, 0, 30), (20, 0, 20), (50, 0, 27));
+  .footer-main{
+    display: flex;
+    flex-wrap: wrap;
+    .footer-copyright{
+      flex: 1;
+      @include resp(margin-right, 20, 0, 0);
+      @include resp(font-size, 16, 16, 18);
+    }
+    .footer-team{
+      @include resp(font-size, 18, 18, 18);
+      font-weight: bold;
+    }
+  }
+}

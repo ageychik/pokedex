@@ -1,7 +1,6 @@
 .index-page{
-  @include resp(padding, (24, 0), (27, 0), (73, 0));
+  @include resp(padding, (24, 0), (27, 0), (20, 0));
   flex: 1;
-  overflow-y: auto;
   @include media($tablet){
     max-height: none;
   }
@@ -11,20 +10,6 @@
       display: flex;
       flex-direction: column;
       height: 100%;
-      max-height: calc(100vh - #{vw(90)});
-      &::-webkit-scrollbar {
-        width: vw(5);
-
-      }
-
-      &::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        margin: vw(70);
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: $color-third;
-      }
     }
   }
 

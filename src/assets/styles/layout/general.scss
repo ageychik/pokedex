@@ -147,3 +147,22 @@ img {
     flex-direction: column;
   }
 }
+
+.scroll{
+  @include media(){
+    max-height: calc(100vh - #{vw(90)});
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: vw(10);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0,0,0,.01);
+      margin: vw(40) 0 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-third;
+    }
+  }
+}

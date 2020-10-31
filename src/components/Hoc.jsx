@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import Header from  '../components/header/Header';
+import Footer from  '../components/footer/Footer';
 import {pokemonItem, pokemonList} from "../actions";
 
 export const Hoc = (Components) => {
@@ -20,7 +21,10 @@ export const Hoc = (Components) => {
             return (
                 <div className='content'>
                     <Header/>
-                    <Components {...this.props}/>
+                    <div className="scroll">
+                        <Components {...this.props}/>
+                        <Footer/>
+                    </div>
                 </div>
             )
         }
