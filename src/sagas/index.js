@@ -25,9 +25,7 @@ function* sagaGetList() {
                 types: data.types.map( item => {
                     return item.type.name;
                 })
-            })
-
-            console.log(data.types)
+            });
         }
         yield put({ type: GET_POKEMON_LIST, payload })
     } catch (e) {

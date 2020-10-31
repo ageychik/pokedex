@@ -1,9 +1,9 @@
 import React from 'react';
 
 //components
-import { Hoc } from '../components/hoc';
+import { Hoc } from '../components/Hoc';
 import Find from '../components/find/Find';
-import Filter from '../components/filter/Filter';
+// import Filter from '../components/filter/Filter';
 import Gallery from '../components/gallery/Gallery';
 
 const initialState = ({
