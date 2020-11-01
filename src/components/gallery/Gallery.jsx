@@ -4,7 +4,7 @@ import CardGallery from '../cards/CardGallery';
 
 export default class Gallery extends React.Component {
     render() {
-        const {state} = this.props;
+        const {state, toggleModal} = this.props;
         const {result} = state.gallery;
 
         if (!!result) {
@@ -12,7 +12,7 @@ export default class Gallery extends React.Component {
                 <section className="gallery">
                     <div className="gallery-main">
                         {result.map((card, index) => {
-                            return (<CardGallery key={index} { ...card }/>)
+                            return (<CardGallery key={index} { ...card } click={toggleModal}/>)
                         })}
                     </div>
                 </section>

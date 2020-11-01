@@ -2,17 +2,14 @@ import React from 'react';
 import Button from '../../components/ui/Button';
 
 export default class CardGallery extends React.Component {
-    componentDidMount() {
-    }
-
     render() {
-        const {name, base_experience: exp, height, id, order, sprites, weight, types} = this.props;
+        const {name, base_experience: exp, height, sprites, types, click} = this.props;
         const styles = {
             backgroundImage: `url(${sprites.big})`
         };
 
         return (
-            <article className="card-gallery">
+            <article className="card-gallery" onClick={click.bind(this, true)}>
                 <div className="card-gallery-main">
                     <div className="card-info">
                         <h3>{name}</h3>

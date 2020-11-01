@@ -2,6 +2,25 @@
   @include resp(padding, (22, 0, 11), (24, 0), (14, 0, 16));
   background: $color-third;
   box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
+  position: relative;
+  z-index: 9;
+  &.open{
+    @media (max-width: $tablet) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.5);
+      .logo{
+        width: vwm(138);
+        height: vwm(51);
+        z-index: 1;
+        right: 0;
+        top: vwm(31);
+        transform: translateX(vwm(15));
+        margin: auto;
+      }
+    }
+  }
   .header-main{
     display: flex;
     align-items: center;
@@ -12,4 +31,5 @@
 .logo{
   @include resp(width, 58, 120, 157);
   @include resp(height, 22, 45, 63);
+  transition: all .25s;
 }

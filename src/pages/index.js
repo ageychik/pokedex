@@ -5,9 +5,11 @@ import { Hoc } from '../components/Hoc';
 import Find from '../components/find/Find';
 // import Filter from '../components/filter/Filter';
 import Gallery from '../components/gallery/Gallery';
+import Modal from '../components/modal/Modal';
+
 
 const initialState = ({
-    sections: [Find, Gallery] // Filter
+    sections: [Modal, Find, Gallery] // Filter
 })
 
 class IndexPage extends React.Component{

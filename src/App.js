@@ -3,8 +3,17 @@ import { Provider } from "react-redux";
 import {store} from "./store";
 import IndexPage from  './pages/index';
 
+// Components
+import Header from  './components/header/Header';
+import Footer from  './components/footer/Footer';
 
 export default () =>
     <Provider store={store}>
-        <main><IndexPage /></main>
+        <main>
+            <Header/>
+            <div className="scroll">
+                <IndexPage />
+                <Footer/>
+            </div>
+        </main>
     </Provider>;
