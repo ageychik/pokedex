@@ -87,7 +87,7 @@
       padding: vwm(124) 0 vwm(24);
       background: linear-gradient(180deg, $color-third 0%, $color-primary 100%);
       box-shadow: 4px 4px 24px rgba(1, 17, 38, 0.2);
-      border-radius: 0 0 16px 16px;
+      @include resp(border-radius, (0, 0, 16, 16), (0, 0, 16, 16), (0, 0, 16, 16));
       display: flex;
       flex-direction: column;
       left: 0;

@@ -4,9 +4,7 @@ import ReactPaginate from 'react-paginate';
 
 export default class Pagination extends React.Component {
     handlePageClick(page){
-        console.log(page.selected, this.props.total, this.props.page)
         let actPage = page.selected;
-        console.log(actPage)
         this.props.click({page: actPage, total: this.props.total, pageSize: this.props.pageSize});
     }
     render() {
@@ -19,8 +17,8 @@ export default class Pagination extends React.Component {
                 breakLabel={'...'}
                 breakClassName={'break-me'}
                 pageCount={pageCount}
-                marginPagesDisplayed={1}
-                pageRangeDisplayed={3}
+                marginPagesDisplayed={3}
+                pageRangeDisplayed={2}
                 onPageChange={this.handlePageClick.bind(this)}
                 containerClassName={'pagination'}
                 subContainerClassName={'pages pagination'}
