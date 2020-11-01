@@ -1,5 +1,6 @@
 import React from 'react';
 import cx from "classnames";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 const initialState = {
     links: [
@@ -9,9 +10,20 @@ const initialState = {
 
 export default class Navigation extends React.Component{
     state = initialState;
+
+    componentDidMount(){
+        this.targetElement = document.querySelector('body');
+    }
+
     render () {
         function handleOpenMenu(){
             this.props.click(!this.props.menuOpen);
+            if(this.props.menuOpen){
+                enableBodyScroll(this.targetElement);
+            } else {
+                disableBodyScroll(this.targetElement);
+            }
+
         }
 
         return (

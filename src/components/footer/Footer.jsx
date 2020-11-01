@@ -6,7 +6,7 @@ export default class Footer extends React.Component {
             <footer className="footer">
                 <div className="container">
                     <div className="footer-main">
-                        <p className="footer-copyright">Make with ❤️ for the PokéSpartans team Platzi Master</p>
+                        <p className="footer-copyright">Make with <span role="img">❤️</span>for the PokéSpartans team Platzi Master</p>
                         <p className="footer-team">Ours Team</p>
                     </div>
                 </div>

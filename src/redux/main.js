@@ -6,7 +6,6 @@ const defaultState = {
 };
 
 export default (state = defaultState, {type, payload}) => {
-    console.log('PAYLOAD', type, payload)
     switch (type) {
         case MODAL_TOGGLE:
             return { ...state, modalOpen: payload.flag };
