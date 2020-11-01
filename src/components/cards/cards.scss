@@ -4,18 +4,18 @@
   @include resp(padding, (0, 0), (0, 10), (0, 16));
   min-height: 136px;
   display: flex;
-  @include media(tablet){
+  @include media(tablet) {
     width: 50%;
   }
-  @include media(){
+  @include media() {
     width: 33.3%;
   }
   h3 {
-    &::first-letter{
+    &::first-letter {
       text-transform: uppercase;
     }
   }
-  .card-gallery-main{
+  .card-gallery-main {
     background: $color-grey;
     @include resp(border-radius, 8, 8, 8);
     box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.2);
@@ -23,13 +23,13 @@
     display: flex;
     flex: 1;
     transition: all .35s .1s;
-    @include media(){
+    @include media() {
       cursor: pointer;
-      &:hover{
+      &:hover {
         box-shadow: 4px 4px 16px rgba(1, 28, 64, 0.75);
-        .card-picture{
+        .card-picture {
           width: 100%;
-          .card-picture-item{
+          .card-picture-item {
             background-size: auto calc(100% + 20px);
             transform: scale(1.5) translate(-10%, 10%);
           }
@@ -96,24 +96,41 @@
       background: linear-gradient(270deg, #B33327 0.15%, #D93E30 100%);
     }
     &[data-color="water"],
-    &[data-color="poison"]{
+    &[data-color="poison"] {
       background: linear-gradient(270deg, #5BC7FA 0.15%, #35BAFF 100%);
     }
 
     &[data-color="grass"] {
       background: linear-gradient(270deg, #64D368 0.15%, #64D368 70.88%);
     }
-    &[data-color="electro"] {
+    &[data-color="psychic"],
+    &[data-color="electric"] {
       background: linear-gradient(270deg, #F2CB07 0.15%, #F2B807 100%);
     }
+    &[data-color="fairy"],
     &[data-color="fluing"] {
       background: linear-gradient(270deg, #F89EAE 0.15%, #F4B5C1 100%);
     }
-    &[data-color="bug"]{
+    &[data-color="bug"] {
       background: linear-gradient(270deg, $color-primary 0.15%, $color-second 100%);
+    }
+    &[data-color="ground"] {
+      background: linear-gradient(270deg, $color-third 0.15%, $color-second 100%);
 
     }
-    .card-picture-item{
+    &[data-color="dark"],
+    &[data-color="fighting"] {
+      background: linear-gradient(270deg, #BF975F 0.15%, #F2EC9B 100%);
+    }
+
+    &[data-color="rock"] {
+      background: linear-gradient(270deg, #470100 0.15%, #878B77 100%);
+    }
+
+    &[data-color="normal"] {
+      background: linear-gradient(270deg, $color-pharagraph 0.15%, $black 100%);
+    }
+    .card-picture-item {
       height: 100%;
       background-position: right center;
       background-repeat: no-repeat;
@@ -125,7 +142,7 @@
   .card-buttons {
     display: flex;
     position: relative;
-    button:not(:last-of-type){
+    button:not(:last-of-type) {
       @include resp(margin-right, 13, 13, 13);
     }
   }

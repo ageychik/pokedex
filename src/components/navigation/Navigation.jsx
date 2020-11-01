@@ -1,10 +1,13 @@
 import React from 'react';
 import cx from "classnames";
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 const initialState = {
     links: [
-        {val: 'Home', href: '#'}, {val: 'Pokédex', href: '#'}, {val: 'Legendaries', href: '#'}, {val: 'Documentation', href: '#'}
+        {val: 'Home', href: '#'},
+        {val: 'Pokédex', href: '#'},
+        {val: 'Legendaries', href: '#'},
+        {val: 'Documentation', href: '#'}
     ]
 }
 

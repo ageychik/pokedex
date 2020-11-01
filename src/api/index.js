@@ -2,8 +2,8 @@ function server(url){
     return fetch(url).then(data => data.json());
 }
 
-export const fetchPokemonList = async () => {
-    const url = 'https://pokeapi.co/api/v2/pokemon?limit=9';
+export const fetchPokemonList = async (settings) => {
+    const url = `https://pokeapi.co/api/v2/pokemon?offset=${(settings.page) * settings.pageSize}&limit=${settings.pageSize}`;
     const response = await server(url);
 
     return {

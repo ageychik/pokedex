@@ -1,24 +1,25 @@
 import React from 'react';
 import CardGallery from '../cards/CardGallery';
-
+import Pagination  from "../pagination/Pagination";
 
 export default class Gallery extends React.Component {
     render() {
         const {state, toggleModal} = this.props;
-        const {result} = state.gallery;
+        const { users, pageSize, page, total} = state.gallery;
+        const { pokemonList } = this.props;
 
-        if (!!result) {
+        if (!!users) {
             return (
                 <section className="gallery">
                     <div className="gallery-main">
-                        {result.map((card, index) => {
+                        {users.map((card, index) => {
                             return (<CardGallery key={index} { ...card } click={toggleModal}/>)
                         })}
                     </div>
+                    <Pagination click={pokemonList} pageSize={pageSize} total={total} page={page}/>
                 </section>
             );
         }
-
         return <div><h2>Load</h2></div>
     }
 }

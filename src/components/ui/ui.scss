@@ -26,10 +26,32 @@
   &.btn-fire{
     background: $color-danger;
   }
+  &.btn-fairy,
   &.btn-flying{
     background: #F89EAE;
   }
+  &.btn-electric,
   &.btn-bug{
     background: $color-primary;
+  }
+  &.btn-normal{
+    background: rgba($color-pharagraph, .5);
+  }
+  &.btn-psychic,
+  &.btn-ground{
+    background: $color-third;
+  }
+  &.btn-fighting{
+    background: #BF975F;
+  }
+  &.btn-dark,
+  &.btn-rock{
+    background: #878B77;
+  }
+  &.btn-steel{
+    background: #3791c3;
+  }
+  &.btn-ice{
+    background: $white;
   }
 }

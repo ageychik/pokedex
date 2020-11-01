@@ -1,13 +1,21 @@
-import { POKEMON_LIST, GET_POKEMON_LIST } from '../types';
+import {POKEMON_LIST, GET_POKEMON_LIST} from '../types';
 
-const defaultState = {};
-
+const defaultState = {
+    users: [],
+    pageSize: 9,
+    total: 0,
+    page: 0
+}
 export default (state = defaultState, {type, payload}) => {
     switch (type) {
         case POKEMON_LIST:
-            return { ...state };
+            return {...state};
         case GET_POKEMON_LIST:
-            return { ...state, ...payload };
+            return {
+                ...state,
+                users: payload.result,
+                total: payload.count
+            };
         default:
             return state
     }

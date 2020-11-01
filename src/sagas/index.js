@@ -6,9 +6,10 @@ export function* sagaWatcher() {
     yield takeEvery(POKEMON_LIST, sagaGetList);
 }
 
-function* sagaGetList() {
+function* sagaGetList(tools) {
+
     try {
-        const payload = yield call(fetchPokemonList);
+        const payload = yield call(fetchPokemonList, tools.payload.settings);
         for(let elem of payload.result){
             let data = yield call(fetchPokemonItem, elem.url);
             Object.assign(elem, {

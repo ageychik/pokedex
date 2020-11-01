@@ -8,14 +8,24 @@ import Gallery from '../components/gallery/Gallery';
 import Modal from '../components/modal/Modal';
 
 
+let mapStateToProps = ( state ) => {
+    return {
+        users: state.gallery.users,
+        pageSize: state.gallery.pageSize,
+        total: state.gallery.total,
+        page: state.gallery.page
+    }
+}
+
 const initialState = ({
-    sections: [Modal, Find, Gallery] // Filter
-})
+    sections: [Modal, Find, Gallery], // Filter
+
+});
 
 class IndexPage extends React.Component{
     state = initialState;
     componentDidMount(){
-        this.props.pokemonList();
+        this.props.pokemonList(this.props.state.gallery);
     }
 
     render () {
@@ -36,7 +46,6 @@ class IndexPage extends React.Component{
             </div>
         )
     }
-
 }
 
 
