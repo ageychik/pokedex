@@ -24,6 +24,7 @@
       @include resp(top, 15, 15, 15);
       font-size: 0;
       position: absolute;
+      transition: all .25s;
       &:before,
       &:after{
         content: '';
@@ -206,6 +207,15 @@
     }
     @include media(){
       width: 800px;
+      .modal-close{
+        cursor: pointer;
+        &:hover{
+          &:before,
+          &:after{
+            background: #555;
+          }
+        }
+      }
       .modal-image{
         width: 45%;
       }
