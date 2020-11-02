@@ -181,6 +181,7 @@
     @include media(tablet){
       flex-direction: row;
       width: 86%;
+      height: auto;
       margin: auto;
       min-width: 670px;
       top: 50%;
@@ -207,6 +208,7 @@
     }
     @include media(){
       width: 800px;
+
       .modal-close{
         cursor: pointer;
         &:hover{
