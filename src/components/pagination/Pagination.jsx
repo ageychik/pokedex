@@ -6,21 +6,17 @@ export default class Pagination extends React.Component {
     handlePageClick(page){
         let actPage = page.selected;
         const settings = {
+            maxToPage: this.props.pageSize,
             page: actPage,
             total: this.props.total,
             pageSize: (actPage + 1) * this.props.pageSize < this.props.total
                     ? this.props.pageSize
                     : this.props.total - actPage * this.props.pageSize
         };
-        console.log(settings)
-        this.props.click({
-            page: actPage,
-            total: this.props.total,
-            pageSize: this.props.pageSize
-        });
+        this.props.click(settings);
     }
     render() {
-        const {page, pageSize, total, click} = this.props;
+        const { pageSize, total } = this.props;
         let pageCount = total / pageSize;
         return (
             <ReactPaginate

@@ -3,7 +3,7 @@ function server(url){
 }
 
 export const fetchPokemonList = async (settings) => {
-    const url = `https://pokeapi.co/api/v2/pokemon?offset=${(settings.page) * settings.pageSize}&limit=${settings.pageSize}`;
+    const url = `https://pokeapi.co/api/v2/pokemon?offset=${(settings.page) * (settings.maxToPage)}&limit=${settings.pageSize}`;
     const response = await server(url);
 
     return {
