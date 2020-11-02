@@ -114,7 +114,10 @@ button{
 }
 
 main{
-
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 section,
@@ -142,27 +145,8 @@ img {
     max-width: 1125px;
     max-height: 100%;
     padding: 0 15px;
-    margin: auto;
-    display: flex;
+    margin: 0 auto;
+    flex: 1;
     flex-direction: column;
-  }
-}
-
-.scroll{
-  @include media(){
-    max-height: calc(100vh - #{vw(90)});
-    overflow: auto;
-    &::-webkit-scrollbar {
-      width: vw(10);
-    }
-
-    &::-webkit-scrollbar-track {
-      background: rgba(0,0,0,.01);
-      margin: vw(40) 0 0;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: $color-third;
-    }
   }
 }

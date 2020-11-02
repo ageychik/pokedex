@@ -1,9 +1,11 @@
 .navigation{
-  width: vwm(31);
-  height: vwm(22);
+
+  @include resp(width, 31, none, none);
+  @include resp(height, 22, none, none);
   position: relative;
   @include media(tablet){
     width: auto;
+    height: auto;
     flex: 1;
     display: flex;
     align-items: center;
@@ -64,10 +66,10 @@
       transition: all .25s;
     }
     &:before{
-      bottom: vwm(8.5);
+      @include resp(bottom, 8.5, 0, 0);
     }
     &:after{
-      top: vwm(8.5);
+      @include resp(top, 8.5, 0,0);
     }
     @include media(tablet){
       display: none;
@@ -84,10 +86,10 @@
 
     }
     @media (max-width: $tablet) {
-      padding: vwm(124) 0 vwm(24);
       background: linear-gradient(180deg, $color-third 0%, $color-primary 100%);
       box-shadow: 4px 4px 24px rgba(1, 17, 38, 0.2);
       @include resp(border-radius, (0, 0, 16, 16), (0, 0, 16, 16), (0, 0, 16, 16));
+      @include resp(padding, (90, 0, 24), (124, 0, 24), none);
       display: flex;
       flex-direction: column;
       left: 0;

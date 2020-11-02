@@ -1,14 +1,15 @@
 .card-gallery {
-  @include resp(margin-bottom, 24, 24, 45);
+  @include resp(margin-bottom, 24, 24, 0);
   @include resp(height, 140, 146, 136);
   @include resp(padding, (0, 0), (0, 10), (0, 16));
-  min-height: 136px;
   display: flex;
+  width: 100%;
   @include media(tablet) {
     width: 50%;
   }
   @include media() {
     width: 33.3%;
+    height: calc(100% / 3 - 15px);
   }
   h3 {
     &::first-letter {
@@ -154,5 +155,9 @@
     button:not(:last-of-type) {
       @include resp(margin-right, 13, 13, 13);
     }
+  }
+  @media (min-width: $mobileL) and (orientation: landscape) and (max-width: $tablet) {
+    width: 50%;
+    padding: 0 vw(15);
   }
 }

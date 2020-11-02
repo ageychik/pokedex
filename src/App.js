@@ -11,9 +11,7 @@ export default () =>
     <Provider store={store}>
         <main>
             <Header/>
-            <div className="scroll">
-                <IndexPage />
-                <Footer/>
-            </div>
+            <IndexPage />
+            <Footer/>
         </main>
     </Provider>;

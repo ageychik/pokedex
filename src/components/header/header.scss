@@ -31,5 +31,7 @@
 .logo{
   @include resp(width, 58, 120, 157);
   @include resp(height, 22, 45, 63);
+  max-width: 157px;
+  max-height: 63px;
   transition: all .25s;
 }

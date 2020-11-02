@@ -72,8 +72,8 @@
 @mixin resp($prop, $m: none, $t: none, $d: none){
   @if $m != none{
     #{ $prop } : value($m, $xs);
-    @media (min-width: $mobileL) and (orientation: landscape) {
-      #{ $prop } : value($m, $sm);
+    @media (min-width: $mobileL) and (orientation: landscape) and (max-width: $tablet){
+      #{ $prop } : value($m, $sm, 'px');
     }
   }
 

@@ -1,5 +1,5 @@
 .footer{
-  @include resp(padding, (20, 0, 30), (20, 0, 20), (50, 0, 27));
+  @include resp(padding, (20, 0, 30), (20, 0, 20), (0, 0, 27));
   .footer-main{
     display: flex;
     flex-wrap: wrap;

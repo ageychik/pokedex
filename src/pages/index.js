@@ -18,7 +18,7 @@ let mapStateToProps = ( state ) => {
 }
 
 const initialState = ({
-    sections: [Modal, Find, Gallery], // Filter
+    sections: [ Find, Gallery], // Filter, Modal
 
 });
 
@@ -35,13 +35,15 @@ class IndexPage extends React.Component{
         return (
             <div className="index-page">
                 <div className="container">
-                    <h2>{ gallery.count } <b>Pokemons</b> for you to choose your favorite</h2>
-                    {componentSections.map((el, index) => {
-                        const Component = el;
-                        return (
-                            <Component key={index} {...this.props} />
-                        );
-                    })}
+                    <div className="index-main">
+                        <h2>{ gallery.count } <b>Pokemons</b> for you to choose your favorite</h2>
+                        {componentSections.map((el, index) => {
+                            const Component = el;
+                            return (
+                                <Component key={index} {...this.props} />
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
         )
