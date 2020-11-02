@@ -7,9 +7,8 @@ export default class CardGallery extends React.Component {
         const styles = {
             backgroundImage: `url(${sprites.big})`
         };
-
         return (
-            <article className="card-gallery" onClick={click.bind(this, true)}>
+            <article className="card-gallery" onClick={click.bind(this, this.props)}>
                 <div className="card-gallery-main">
                     <div className="card-info">
                         <h3>{name}</h3>

@@ -8,7 +8,7 @@ const defaultState = {
 export default (state = defaultState, {type, payload}) => {
     switch (type) {
         case MODAL_TOGGLE:
-            return { ...state, modalOpen: payload.flag };
+            return { ...state, modalOpen: payload };
         case MENU_TOGGLE:
             return { ...state, menuOpen: payload.flag };
         default:

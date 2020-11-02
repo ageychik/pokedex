@@ -1,9 +1,12 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
-import {POKEMON_LIST, GET_POKEMON_LIST} from '../types';
+import {POKEMON_LIST, GET_POKEMON_LIST, SELECT_POKEMON, MODAL_TOGGLE} from '../types';
 import { fetchPokemonList, fetchPokemonItem } from '../api/'
 
 export function* sagaWatcher() {
     yield takeEvery(POKEMON_LIST, sagaGetList);
+    yield takeEvery(SELECT_POKEMON, function* (event) {
+        yield put({ type: MODAL_TOGGLE, payload: !!event.payload.select })
+    });
 }
 
 function* sagaGetList(tools) {

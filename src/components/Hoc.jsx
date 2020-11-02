@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { pokemonList, toggleModal } from "../actions";
+import { pokemonList, selectPokemon } from "../actions";
 
 export const Hoc = (Components) => {
     const mapStateToProps = (state) => ({ state });
-    const dispatchProps = { pokemonList, toggleModal };
+    const dispatchProps = { pokemonList, selectPokemon };
 
     class HOComponent extends React.Component{
         componentDidMount(){}
