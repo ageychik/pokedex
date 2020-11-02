@@ -1,18 +1,18 @@
 .pagination{
   display: flex;
   li{
-    @include resp(font-size, 12, 14, 16);
     @include resp(border-radius, 40, 40, 40);
     background: #f2f2f2;
     @include resp(margin, (0, 5), (0, 5), (0, 5));
     box-shadow: 2px 2px 2px rgba(33, 33, 33, 0.1);
-    display: none;
-    &.previous,
-    &.next{
-      display: inline-flex;
-    }
-    @include media(tablet){
-      display: inline-flex;
+    display: inline-flex;
+    a{
+      cursor: pointer;
+      @include resp(padding, (5, 12), (5, 12), (12, 20));
+      @include resp(font-size, 12, 14, 16);
+      color: $color-pharagraph;
+      font-weight: 400;
+      line-height: 1.25;
     }
     &.active{
       background: $color-pharagraph;
@@ -20,13 +20,28 @@
         cursor: default;
         color: $white;
       }
+      & + .next {
+        display: none;
+      }
     }
-    a{
-      cursor: pointer;
-      @include resp(padding, (9, 18, 6), (5, 12), (12, 20));
-      color: $color-pharagraph;
-      font-weight: 400;
-      line-height: 1.25;
+    &.break-me{
+      align-self: center;
+      a{
+        font-size: 0;
+        @include resp(padding, 7, 7, 7);
+      }
     }
+    &.previous,
+    &.next{
+      display: inline-flex;
+    }
+    &.disabled{
+      display: none;
+    }
+    @include media(tablet){
+      display: inline-flex;
+    }
+
+
   }
 }

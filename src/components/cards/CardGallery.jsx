@@ -3,7 +3,7 @@ import Button from '../../components/ui/Button';
 
 export default class CardGallery extends React.Component {
     render() {
-        const {name, base_experience: exp, height, sprites, types, click} = this.props;
+        const {name, attack, defense, sprites, types, click} = this.props;
         const styles = {
             backgroundImage: `url(${sprites.big})`
         };
@@ -16,12 +16,12 @@ export default class CardGallery extends React.Component {
 
                         <div className="card-stats">
                             <div className="card-state">
-                                <div className="num"><span>{exp}</span></div>
-                                <span className="name">BaseExp</span>
+                                <div className="num"><span>{attack}</span></div>
+                                <span className="name">Attack</span>
                             </div>
                             <div className="card-state">
-                                <div className="num"><span>{height}</span></div>
-                                <span className="name">Height</span>
+                                <div className="num"><span>{defense}</span></div>
+                                <span className="name">Defense</span>
                             </div>
                         </div>
 

@@ -7,7 +7,6 @@ export default class Gallery extends React.Component {
         const {state, toggleModal} = this.props;
         const { users, pageSize, page, total} = state.gallery;
         const { pokemonList } = this.props;
-
         if (!!users) {
             return (
                 <section className="gallery">

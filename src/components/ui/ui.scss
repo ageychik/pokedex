@@ -25,6 +25,7 @@
   }
   &.btn-fire{
     background: $color-danger;
+    color: $white;
   }
   &.btn-fairy,
   &.btn-flying{
@@ -35,7 +36,8 @@
     background: $color-primary;
   }
   &.btn-normal{
-    background: rgba($color-pharagraph, .5);
+    background: rgba($color-pharagraph, .75);
+    color: $white;
   }
   &.btn-psychic,
   &.btn-ground{
@@ -47,11 +49,17 @@
   &.btn-dark,
   &.btn-rock{
     background: #878B77;
+    color: $white;
+  }
+  &.btn-ice{
+    background: #8dcbf9;
   }
   &.btn-steel{
     background: #3791c3;
+    color: $white;
   }
-  &.btn-ice{
-    background: $white;
+  &.btn-ghost{
+    background: $black;
+    color: $white;
   }
 }

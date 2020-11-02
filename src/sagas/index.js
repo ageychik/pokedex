@@ -13,16 +13,22 @@ function* sagaGetList(tools) {
         for(let elem of payload.result){
             let data = yield call(fetchPokemonItem, elem.url);
             Object.assign(elem, {
-                base_experience: data.base_experience,
                 id: data.id,
-                height: data.height,
                 name: data.name,
-                order: data.order,
+                height: data.height,
+                weight: data.weight,
+                base_experience: data.base_experience,
+                hp: data.stats[0].base_stat,
+                attack: data.stats[1].base_stat,
+                defense: data.stats[2].base_stat,
+                spAttack: data.stats[3].base_stat,
+                spDefense: data.stats[4].base_stat,
+                speed: data.stats[5].base_stat,
                 sprites: {
                     big: data.sprites.other['official-artwork'].front_default,
                     small: data.sprites.front_default
                 },
-                weight: data.weight,
+
                 types: data.types.map( item => {
                     return item.type.name;
                 })

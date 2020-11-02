@@ -7,7 +7,7 @@ export const fetchPokemonList = async (settings) => {
     const response = await server(url);
 
     return {
-        count: response.count,
+        count: 150,
         result: response.results
     };
 };
