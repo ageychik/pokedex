@@ -24,6 +24,33 @@
     display: flex;
     flex: 1;
     transition: all .35s .1s;
+    position: relative;
+    &.load{
+      &:before{
+        content: '';
+        width: 0;
+        height: 0;
+        border-width: 50px;
+        border-style: solid;
+        border-color: transparent;
+        border-top-color: rgba($color-danger, .9);
+        border-right-color: rgba($color-danger, .9);
+        position: absolute;
+        box-shadow: 0 0 4px rgba(0,0,0,1), inset 0 0 0 4px #fff;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        border-radius: 50%;
+        opacity: .4;
+        overflow: hidden;
+        animation: preload 5s linear infinite;
+      }
+      & > * {
+        opacity: 0;
+      }
+    }
     @include media() {
       cursor: pointer;
       &:hover {
@@ -48,6 +75,7 @@
     margin-right: -12%;
     position: relative;
     z-index: 2;
+    transition: opacity .35s;
   }
   .card-stats {
     @include resp(margin, (0, -6, 0), (0, -6, 0), (0, -6, 0));

@@ -1,15 +1,16 @@
 import React from 'react';
 import Button from '../../components/ui/Button';
+import cx from "classnames";
 
 export default class CardGallery extends React.Component {
     render() {
-        const {name, attack, defense, sprites, types, click} = this.props;
+        const {name, attack, defense, sprites, types, click, load} = this.props;
         const styles = {
             backgroundImage: `url(${sprites.big})`
         };
         return (
             <article className="card-gallery" onClick={click.bind(this, this.props)}>
-                <div className="card-gallery-main">
+                <div className={cx("card-gallery-main", {"load": load})}>
                     <div className="card-info">
                         <h3>{name}</h3>
 

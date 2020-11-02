@@ -11,13 +11,11 @@ export default class Gallery extends React.Component {
         if (!!users) {
             return (
                 <section className="gallery">
-                    {!load &&
-                        <div className="gallery-main">
-                            {users.map((card, index) => {
-                                return (<CardGallery key={index} { ...card } click={ selectPokemon }/>)
-                            })}
-                        </div>
-                    }
+                    <div className="gallery-main">
+                        {users.map((card, index) => {
+                            return (<CardGallery key={index} load={load} { ...card } click={ selectPokemon }/>)
+                        })}
+                    </div>
                     <Pagination click={pokemonList} pageSize={pageSize} total={total} page={page}/>
                 </section>
             );
