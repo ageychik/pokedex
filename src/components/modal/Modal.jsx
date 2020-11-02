@@ -10,7 +10,6 @@ class Modal extends React.Component {
         const { selectPokemon: click, state } = this.props;
         const { modalOpen: open } = state.main;
         const { selectPokemon } = state.gallery;
-        console.log(selectPokemon)
         return (
 
             <div>

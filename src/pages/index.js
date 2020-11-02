@@ -3,22 +3,10 @@ import React from 'react';
 //components
 import { Hoc } from '../components/Hoc';
 import Find from '../components/find/Find';
-// import Filter from '../components/filter/Filter';
 import Gallery from '../components/gallery/Gallery';
-import Modal from '../components/modal/Modal';
-
-
-let mapStateToProps = ( state ) => {
-    return {
-        users: state.gallery.users,
-        pageSize: state.gallery.pageSize,
-        total: state.gallery.total,
-        page: state.gallery.page
-    }
-}
 
 const initialState = ({
-    sections: [ Find, Gallery], // Filter, Modal
+    sections: [ Find, Gallery],
 
 });
 

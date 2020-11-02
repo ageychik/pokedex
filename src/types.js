@@ -4,3 +4,4 @@ export const POKEMON_ITEM = 'POKEMON_ITEM';
 export const MODAL_TOGGLE = 'MODAL_TOGGLE';
 export const MENU_TOGGLE = 'MENU_TOGGLE';
 export const SELECT_POKEMON = 'SELECT_POKEMON';
+export const LOAD_POKEMON = 'LOAD_POKEMON';

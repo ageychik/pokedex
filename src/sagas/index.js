@@ -1,5 +1,5 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
-import {POKEMON_LIST, GET_POKEMON_LIST, SELECT_POKEMON, MODAL_TOGGLE} from '../types';
+import {POKEMON_LIST, GET_POKEMON_LIST, SELECT_POKEMON, MODAL_TOGGLE, LOAD_POKEMON} from '../types';
 import { fetchPokemonList, fetchPokemonItem } from '../api/'
 
 export function* sagaWatcher() {
@@ -13,6 +13,7 @@ function* sagaGetList(tools) {
 
     try {
         const payload = yield call(fetchPokemonList, tools.payload.settings);
+        yield put({ type: LOAD_POKEMON, payload: true });
         for(let elem of payload.result){
             let data = yield call(fetchPokemonItem, elem.url);
             Object.assign(elem, {
@@ -37,6 +38,7 @@ function* sagaGetList(tools) {
                 })
             });
         }
+        yield put({ type: LOAD_POKEMON, payload: false });
         yield put({ type: GET_POKEMON_LIST, payload })
     } catch (e) {
         console.log(e)
